@@ -1,3 +1,94 @@
-<h1>Welcome</h1>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Shreya</title>
+		<meta name="keywords" content="folder, preview, effect, ui, hover, web design, concept, animation" />
+		<meta name="author" content="Codrops" />
+		<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,400,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/ravi_demo.css" />
+		<script>
+			document.documentElement.className = 'js';
+			function browserCanUseCssVariables() { return window.CSS && window.CSS.supports && window.CSS.supports('--fake-var', 0); }
+			if (!browserCanUseCssVariables()) alert('Your browser does not support CSS Variables. Please use a modern browser to view this demo.');
+		</script>
+	</head>
 
-<%= link_to 'My Blog', controller: 'articles' %>
+	<body>
+
+		<svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
+			</symbol>
+			<symbol id="icon-drop" viewBox="0 0 24 24">
+				<title>drop</title>
+				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
+			</symbol>
+			<symbol id="icon-folderback" viewBox="0 0 20 16">
+				<title>folder-back</title>
+				<path d="M7.5,0C7.4,0,2,0,2,0C0.9,0,0,0.9,0,2l0,12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V4c0-1.1-0.9-2-2-2c0,0-7.5,0-8,0C9,2,9.9,0,7.5,0z"/>
+			</symbol>
+			<symbol id="icon-foldercover" viewBox="0 0 20 16">
+				<title>folder-cover</title>
+				<path d="M2,2h16c1.1,0,2,0.9,2,2v10c0,1.1-0.9,2-2,2H2c-1.1,0-2-0.9-2-2V4C0,2.9,0.9,2,2,2z"/>
+			</symbol>
+			<symbol id="icon-folderdummy" viewBox="0 0 20 16">
+				<title>folder-dummy</title>
+				<path d="M7.5,0C7.4,0,2,0,2,0C0.9,0,0,0.9,0,2l0,12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V4c0-1.1-0.9-2-2-2c0,0-7.5,0-8,0C9,2,9.9,0,7.5,0z"/><path d="M2,2h16c1.1,0,2,0.9,2,2v10c0,1.1-0.9,2-2,2H2c-1.1,0-2-0.9-2-2V4C0,2.9,0.9,2,2,2z"/>
+			</symbol>
+		</svg>
+
+		<section class="content content--ravi">
+			<div class="grid">
+				<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+				<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+				<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+				<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+				<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+				<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+				<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+				<div class="grid__item">
+					<div class="folder folder--ravi">
+						<div class="folder__icon folder__icon--perspective">
+							<div class="folder__feedback"></div>
+							<div class="folder__icon-img folder__icon-img--back">
+								<svg class="folder__icon-svg"><use xlink:href="#icon-folderback"></use></svg>
+							</div>
+							<div class="folder__icon-deco"></div>
+							<div class="folder__preview folder__preview--thumbs">
+								<%= image_tag "photo13.png", class: 'folder__thumb' %>
+								<%= image_tag "photo15.png", class: 'folder__thumb' %>
+								<%= image_tag "photo14.png", class: 'folder__thumb' %>
+							</div>
+							<div class="folder__icon-img folder__icon-img--cover">
+								<svg class="folder__icon-svg"><use xlink:href="#icon-foldercover"></use></svg>
+								<svg class="folder__icon-svg folder__icon-svg--deco"><use xlink:href="#icon-padlock"></use></svg>
+							</div>
+						</div>
+						<h3 class="folder__caption"><%= link_to 'My Blog', controller: 'articles' %></h3>
+					</div>
+				</div>
+				<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+				<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+				<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+				<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+				<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+				<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+				<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+			</div><!-- /grid-->
+		</section>
+	</body>
+	<script src="channels/anime.min.js"></script>
+		<script src="channels/charming.min.js"></script>
+		<script src="channels/ravi_main.js"></script>
+		<script>
+		(function() {
+			new RaviFx(document.querySelector('.content--ravi .folder--ravi'));
+		})();
+	</script>
+
+</html>
