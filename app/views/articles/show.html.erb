@@ -14,5 +14,7 @@
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
  
-<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= if logged_in? 
+      link_to 'Edit', edit_article_path(@article)
+    end %><br>
 <%= link_to 'Back', articles_path %>
