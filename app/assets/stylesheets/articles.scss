@@ -1,3 +1,176 @@
-// Place all the styles related to the Articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/**
+  index
+**/
+
+.all_index {
+  background-color:	#F8F8F8;
+}
+
+.header {
+  height: 50px;
+  text-align: right;
+  background-color: black;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px;
+}
+
+.login {
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-top: 13px;
+  padding-bottom: 30px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 20px;
+}
+
+#heading {
+  text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
+  padding: 10px;
+  font-size: 30px;
+  color: black;
+  letter-spacing: 1px;
+}
+
+.too_long {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 400px;
+  display: block;
+  //margin: 50px;
+}
+
+.post_preview {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  color: black;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.each_post, .comment_list {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  margin: 10px;
+  justify-content: space-evenly;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px;
+}
+
+.head {
+  display: flex;
+  width: 80%;
+  text-align: left;
+  flex-direction: column;
+  line-height: 30px;
+}
+
+.buttons {
+  display: flex;
+  text-align: left;
+  line-height: 30px;
+  flex-direction: column;
+}
+
+.new_post_link{
+  margin: 20px;
+  font-size: 20px;
+}
+
+/**
+  show
+**/
+
+.all_show {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+.comment_list {
+  width: 50%;
+  margin: auto;
+}
+
+.title {
+  margin-top: 50px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.text {
+  margin: 35px;
+  font-size: 20px;
+  //overflow: scroll;
+  width: auto;
+  word-wrap: break-word;
+  
+}
+
+.add_comment {
+  margin: auto;
+  width: 50%;
+}
+
+h3 {
+  font-size: 30px;
+  text-align: center;
+}
+
+input.input_box, textarea {
+  background-color:  #F8F8F8;
+  width: 100%;
+}
+
+/**
+Edit
+**/
+
+.all_edit {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+/**
+New
+**/
+
+.all_new {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #F8F8F8;
+  color: black;  
+}
+
+/**
+Blog Post Form
+**/
+
+.all_form {
+  margin : 35px;
+}
+
+input.all_form, textarea {
+  background-color:  #F8F8F8;
+  width: 100%;
+  height: 200px;
+}
+
+.heading_new_blog {
+  font-size: 20px;
+}
+
+/**
+articles form
+**/
+
+#error_explanation {
+  color: #D8000C;
+	background-color: #FFBABA;
+	width: 100%;
+	margin: auto;
+	padding: 10px;
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px;
+}

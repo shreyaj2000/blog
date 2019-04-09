@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       log_in email
       redirect_to articles_url
     else
-      flash.now[:danger] = 'Invalid email or password'
+      flash.now[:error] = 'Invalid email or password'
       render 'new'
     end
   end

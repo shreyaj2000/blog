@@ -1,15 +1,33 @@
-<% provide(:title, "Log in") %>
-<h1>Admin Log In</h1>
+<!DOCTYPE html>
 
-<div>
-  <%= form_for(:session, url: login_path) do |f| %>
+<head>
   
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-    
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-    
-    <%= f.submit "Log in" %>
+</head>
+<body class="all_new">
+  
+  <div class= "header">
+    <div class = "back_button">
+      <%= link_to 'Back', articles_path %>
+    </div>
+  </div>
+  <% flash.each do |key,value| %>
+    <div class="error">
+      <%= value %>
+    </div>
   <% end %>
-</div>
+  <div class="login_menu">
+    <% provide(:title, "Log in") %>
+    <h1>Admin Log In</h1>
+  
+    <%= form_for(:session, url: login_path) do |f| %>
+      
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+      
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+      
+      <%= f.submit "Log in" %>
+    <% end %>
+  </div>
+</body>

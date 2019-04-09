@@ -19,5 +19,11 @@ module SessionsHelper
     session.delete(:email)
     @current_user = nil
   end
+  
+  def flash_class(level)
+    case level
+      when :error then "alert alert-error"
+    end
+  end
 
 end
