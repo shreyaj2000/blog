@@ -1,2 +1,35 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<!DOCTYPE html>
+<% provide(:title, 'Sign up') %>
+<html>
+  <head>
+    
+  </head>
+  <body class="all_users">
+    <div class= "header">
+      <div class = "back_button">
+        <%= link_to 'Back', articles_path %>
+      </div>
+    </div>
+    
+    <h1>Sign Up</h1>
+      <%= form_for(@user, url: signup_path) do |f| %>
+        
+        <%= render 'shared/error_messages' %>          
+        <div class="form">
+        <%= f.label :name %><br>
+        <%= f.text_field :name %><br>
+  
+        <%= f.label :email %><br>
+        <%= f.email_field :email %><br>
+  
+        <%= f.label :password %><br>
+        <%= f.password_field :password %><br>
+  
+        <%= f.label :password_confirmation, "Confirmation" %><br>
+        <%= f.password_field :password_confirmation %><br>
+  
+        <%= f.submit "Create my account", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+  </body>
+</html>
